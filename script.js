@@ -172,40 +172,43 @@ form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const btnSpan = btn.querySelector('span');
-    const attachmentInput = document.getElementById('attachment');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const subjectInput = document.getElementById('subject');
+    const messageInput = document.getElementById('message');
     const original = btnSpan.textContent;
 
-    if (attachmentInput && attachmentInput.files.length > 0) {
-        const file = attachmentInput.files[0];
-        const maxSize = 50 * 1024 * 1024;
-        const isPdfType = file.type === 'application/pdf';
-        const hasPdfExt = file.name.toLowerCase().endsWith('.pdf');
+    const nameValue = nameInput ? nameInput.value.trim() : '';
+    const emailValue = emailInput ? emailInput.value.trim() : '';
+    const subjectValue = subjectInput ? subjectInput.value.trim() : '';
+    const messageValue = messageInput ? messageInput.value.trim() : '';
 
-        if (!isPdfType && !hasPdfExt) {
-            btnSpan.textContent = 'Only PDF file allowed';
-            btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
-            setTimeout(() => {
-                btnSpan.textContent = original;
-                btn.style.background = '';
-            }, 2500);
-            return;
-        }
+    if (!nameValue || !emailValue || !subjectValue || !messageValue) {
+        btnSpan.textContent = 'Please fill all required fields';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        setTimeout(() => {
+            btnSpan.textContent = original;
+            btn.style.background = '';
+        }, 2500);
+        return;
+    }
 
-        if (file.size > maxSize) {
-            btnSpan.textContent = 'Max file size is 50MB';
-            btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
-            setTimeout(() => {
-                btnSpan.textContent = original;
-                btn.style.background = '';
-            }, 2500);
-            return;
-        }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(emailValue)) {
+        btnSpan.textContent = 'Please enter a valid email';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+        setTimeout(() => {
+            btnSpan.textContent = original;
+            btn.style.background = '';
+        }, 2500);
+        return;
     }
 
     btnSpan.textContent = 'Sending...';
     btn.disabled = true;
 
     const formData = new FormData(form);
+    formData.delete('attachment'); // Web3Forms free plan does not support file uploads
 
     try {
         const res = await fetch('https://api.web3forms.com/submit', {
