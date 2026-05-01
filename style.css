@@ -646,6 +646,26 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 28px;
+    background: linear-gradient(135deg, #25d366, #128c7e);
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid rgba(37, 211, 102, 0.5);
+    border-radius: var(--radius);
+    font-size: 0.95rem;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(18, 140, 126, 0.35);
+}
+
 /* ═══════════════════════════════════════
    SECTIONS — COMMON
 ═══════════════════════════════════════ */
@@ -1388,6 +1408,13 @@ body {
     color: var(--text-faint);
 }
 
+.file-note {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.78rem;
+    color: var(--text-faint);
+}
+
 /* ═══════════════════════════════════════
    FOOTER
 ═══════════════════════════════════════ */
@@ -1694,7 +1721,8 @@ body {
     }
 
     .btn-primary,
-    .btn-ghost {
+    .btn-ghost,
+    .btn-whatsapp {
         width: 100%;
         max-width: 320px;
         justify-content: center;
