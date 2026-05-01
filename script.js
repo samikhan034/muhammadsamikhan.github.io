@@ -132,15 +132,19 @@ const observer = new IntersectionObserver(entries => {
 
 revealEls.forEach(el => observer.observe(el));
 
-// Counters trigger when hero stats visible
-const heroSection = document.querySelector('.hero');
-const heroObserver = new IntersectionObserver(entries => {
-    if (entries[0].isIntersecting && !countersStarted) {
-        countersStarted = true;
-        counters.forEach(c => animateCounter(c));
-    }
-}, { threshold: 0.5 });
-heroObserver.observe(heroSection);
+// Counters trigger only when stats row itself is in view
+const heroStats = document.querySelector('.hero-stats');
+if (heroStats) {
+    const heroObserver = new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting && !countersStarted) {
+            countersStarted = true;
+            counters.forEach(c => animateCounter(c));
+            heroObserver.disconnect();
+        }
+    }, { threshold: 0.65, rootMargin: '0px 0px -10% 0px' });
+
+    heroObserver.observe(heroStats);
+}
 
 /* ─────────────────────────────────
    ACTIVE NAV LINK (scroll spy)
@@ -168,19 +172,45 @@ form.addEventListener('submit', async e => {
     e.preventDefault();
     const btn = form.querySelector('button[type="submit"]');
     const btnSpan = btn.querySelector('span');
+    const attachmentInput = document.getElementById('attachment');
     const original = btnSpan.textContent;
+
+    if (attachmentInput && attachmentInput.files.length > 0) {
+        const file = attachmentInput.files[0];
+        const maxSize = 50 * 1024 * 1024;
+        const isPdfType = file.type === 'application/pdf';
+        const hasPdfExt = file.name.toLowerCase().endsWith('.pdf');
+
+        if (!isPdfType && !hasPdfExt) {
+            btnSpan.textContent = 'Only PDF file allowed';
+            btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+            setTimeout(() => {
+                btnSpan.textContent = original;
+                btn.style.background = '';
+            }, 2500);
+            return;
+        }
+
+        if (file.size > maxSize) {
+            btnSpan.textContent = 'Max file size is 50MB';
+            btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+            setTimeout(() => {
+                btnSpan.textContent = original;
+                btn.style.background = '';
+            }, 2500);
+            return;
+        }
+    }
 
     btnSpan.textContent = 'Sending...';
     btn.disabled = true;
 
     const formData = new FormData(form);
-    const data = Object.fromEntries(formData);
 
     try {
         const res = await fetch('https://api.web3forms.com/submit', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify(data)
+            body: formData
         });
         const json = await res.json();
         if (json.success) {
