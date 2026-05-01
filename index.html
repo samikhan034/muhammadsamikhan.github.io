@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muhammad Sami Khan — Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- ───────────── CURSOR ───────────── -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- ───────────── NAV ───────────── -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-brand">
+            <span class="brand-dot"></span>MSK
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#experience" class="nav-link">Experience</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn-nav">Hire Me</a>
+        <div class="hamburger" id="hamburger">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!-- ───────────── HERO ───────────── -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="grid-overlay"></div>
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>Available for work
+            </div>
+            <h1 class="hero-title">
+                <span class="line">Hi, I'm</span>
+                <span class="line gradient-text">Muhammad Sami Khan</span>
+            </h1>
+            <p class="hero-subtitle typed-wrapper">
+                <span class="typed-text" id="typedText"></span>
+                <span class="caret">|</span>
+            </p>
+            <p class="hero-desc">
+                I help businesses grow online — through high-converting websites, powerful
+                SEO strategies, thriving eCommerce stores, and efficient truck dispatching operations.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn-primary">View My Work</a>
+                <a href="#contact" class="btn-ghost">Get In Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat"><span class="stat-num" data-target="50">0</span><span>+</span>
+                    <p>Projects</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num" data-target="5">0</span><span>+</span>
+                    <p>Years Exp.</p>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat"><span class="stat-num" data-target="30">0</span><span>+</span>
+                    <p>Clients</p>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="avatar-ring">
+                <div class="avatar-inner">
+                    <div class="avatar-initials">MSK</div>
+                </div>
+                <svg class="ring-svg" viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="96" fill="none" stroke="url(#grad)" stroke-width="2"
+                        stroke-dasharray="8 6" />
+                </svg>
+                <div class="floating-badge fb-1">
+                    <img src="https://cdn.simpleicons.org/wordpress/21759B" alt="WordPress" />
+                </div>
+                <div class="floating-badge fb-2">
+                    <img src="https://cdn.simpleicons.org/shopify/96BF48" alt="Shopify" />
+                </div>
+                <div class="floating-badge fb-3">
+                    <img src="https://cdn.simpleicons.org/google/4285F4" alt="SEO" />
+                </div>
+                <div class="floating-badge fb-4">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                        alt="HTML5" />
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ───────────── ABOUT ───────────── -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 / About</span>
+                <h2 class="section-title">Crafting Digital <span class="gradient-text">Experiences</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text reveal">
+                    <p>
+                        I'm <strong>Muhammad Sami Khan</strong> — a multi-skilled digital professional with expertise in
+                        <strong>SEO, Website Development, eCommerce</strong>, and <strong>Truck Dispatching</strong>.
+                        I help businesses build a strong online presence and streamline their operations.
+                    </p>
+                    <p>
+                        From ranking websites on the first page of Google to launching high-converting Shopify and
+                        WooCommerce stores, I deliver measurable results. On the logistics side, I manage freight
+                        operations efficiently — finding loads, negotiating rates, and keeping drivers moving.
+                    </p>
+                    <p>
+                        My focus is always on generating real value: more traffic, more sales, and smoother operations
+                        for every client I work with.
+                    </p>
+                    <div class="about-links">
+                        <a href="#" class="link-pill">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg>
+                            GitHub
+                        </a>
+                        <a href="#" class="link-pill">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                            LinkedIn
+                        </a>
+                        <a href="#" class="link-pill">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                            </svg>
+                            Resume
+                        </a>
+                    </div>
+                </div>
+                <div class="about-cards reveal">
+                    <div class="about-card">
+                        <div class="card-icon">🔍</div>
+                        <h3>SEO Expert</h3>
+                        <p>On-page & off-page SEO, keyword research, link building — ranking your site on Google's first
+                            page.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">💻</div>
+                        <h3>Web Developer</h3>
+                        <p>Custom WordPress, Shopify & HTML/CSS websites — fast, responsive, and conversion-optimized.
+                        </p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">🛒</div>
+                        <h3>eCommerce Specialist</h3>
+                        <p>Full eCommerce store setup, product listing, payment integration, and sales funnel
+                            optimization.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="card-icon">🚛</div>
+                        <h3>Truck Dispatcher</h3>
+                        <p>Load booking, rate negotiation, carrier communication, and 24/7 dispatch support for trucking
+                            fleets.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────────── SKILLS ───────────── -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 / Skills</span>
+                <h2 class="section-title">My <span class="gradient-text">Expertise</span></h2>
+            </div>
+            <div class="skills-grid reveal">
+                <div class="skill-category">
+                    <h3 class="cat-title"><span class="cat-dot"></span>SEO</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">🔍 Keyword Research</span>
+                        <span class="skill-tag">📄 On-Page SEO</span>
+                        <span class="skill-tag">🔗 Link Building</span>
+                        <span class="skill-tag">📊 Google Analytics</span>
+                        <span class="skill-tag">🛠 Google Search Console</span>
+                        <span class="skill-tag">📈 Rank Tracking</span>
+                        <span class="skill-tag">🗺 Technical SEO</span>
+                        <span class="skill-tag">✍️ SEO Content Writing</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="cat-title"><span class="cat-dot" style="background:#10b981"></span>Website Development
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag"><img
+                                src="https://cdn.simpleicons.org/wordpress/21759B" />WordPress</span>
+                        <span class="skill-tag"><img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />HTML5</span>
+                        <span class="skill-tag"><img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" />CSS3</span>
+                        <span class="skill-tag"><img
+                                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" />JavaScript</span>
+                        <span class="skill-tag"><img
+                                src="https://cdn.simpleicons.org/elementor/92003B" />Elementor</span>
+                        <span class="skill-tag">🎨 Landing Pages</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="cat-title"><span class="cat-dot" style="background:#f59e0b"></span>eCommerce</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">🛍 Shopify</span>
+                        <span class="skill-tag">🛒 WooCommerce</span>
+                        <span class="skill-tag">📦 Product Listing</span>
+                        <span class="skill-tag">💳 Payment Integration</span>
+                        <span class="skill-tag">📬 Email Marketing</span>
+                        <span class="skill-tag">🔄 Dropshipping</span>
+                        <span class="skill-tag">📊 Conversion Optimization</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="cat-title"><span class="cat-dot" style="background:#ec4899"></span>Truck Dispatching</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">🚛 Load Booking</span>
+                        <span class="skill-tag">💰 Rate Negotiation</span>
+                        <span class="skill-tag">📋 DAT / Truckstop</span>
+                        <span class="skill-tag">📡 Fleet Tracking</span>
+                        <span class="skill-tag">📞 Carrier Relations</span>
+                        <span class="skill-tag">📝 BOL & Invoicing</span>
+                        <span class="skill-tag">🗺 Route Planning</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────────── PROJECTS ───────────── -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 / Projects</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Work</span></h2>
+            </div>
+            <div class="projects-grid">
+
+                <div class="project-card featured reveal">
+                    <div class="project-img project-img--photo"
+                        style="background: linear-gradient(135deg,#0a0a0f,#1a1a2e);">
+                        <img src="ai.png" alt="Agentive AI — Code Improvement Tool Screenshot"
+                            class="project-screenshot" />
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta">
+                            <span class="project-num">01</span>
+                            <span class="project-badge">Featured</span>
+                        </div>
+                        <h3>Agentive AI — Code Improvement &amp; Suggestion Tool</h3>
+                        <p>An intelligent AI-powered tool that analyzes your code and provides smart improvement
+                            suggestions, bug detection, and best-practice recommendations across multiple languages in
+                            real time.</p>
+                        <div class="project-tags">
+                            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Python</span><span>PHP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img project-img--photo"
+                        style="background: linear-gradient(135deg,#0a0a0f,#1a1a2e);">
+                        <img src="seo.png" alt="SEO & Meta Ads Campaign Screenshot" class="project-screenshot" />
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta"><span class="project-num">02</span></div>
+                        <h3>SEO &amp; Meta Ads Campaign — CyberXops</h3>
+                        <p>Planned and executed a full-scale SEO and Meta Ads strategy for CyberXops, driving organic
+                            traffic growth and paid campaign performance through targeted keyword optimization and
+                            audience segmentation.</p>
+                        <div class="project-tags">
+                            <span>SEO</span><span>Meta Ads</span><span>Google Analytics</span><span>Keyword
+                                Research</span><span>Content Strategy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img" style="background: linear-gradient(135deg,#10b981,#059669);">
+                        <div class="project-mock">
+                            <div class="mock-bar"><span></span><span></span><span></span></div>
+                            <div class="mock-content">
+                                <div class="mock-cards-sm">
+                                    <div class="mock-card-sm"></div>
+                                    <div class="mock-card-sm"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta"><span class="project-num">03</span></div>
+                        <h3>MindFlow — AI Notes App</h3>
+                        <p>AI-powered note-taking app with semantic search, auto-tagging, and smart summarization using
+                            GPT-4.</p>
+                        <div class="project-tags">
+                            <span>Vue.js</span><span>Python</span><span>OpenAI</span><span>Pinecone</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-img" style="background: linear-gradient(135deg,#f59e0b,#ef4444);">
+                        <div class="project-mock">
+                            <div class="mock-bar"><span></span><span></span><span></span></div>
+                            <div class="mock-content">
+                                <div class="mock-grid-sm">
+                                    <div class="mock-cell"></div>
+                                    <div class="mock-cell"></div>
+                                    <div class="mock-cell"></div>
+                                    <div class="mock-cell"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <div class="project-meta"><span class="project-num">04</span></div>
+                        <h3>DevCollab — Code Review</h3>
+                        <p>Real-time collaborative code review platform with inline comments, AI suggestions, and CI/CD
+                            integration.</p>
+                        <div class="project-tags">
+                            <span>TypeScript</span><span>GraphQL</span><span>Docker</span><span>GitHub API</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────────── EXPERIENCE ───────────── -->
+    <section class="section experience-section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 / Experience</span>
+                <h2 class="section-title">Career <span class="gradient-text">Journey</span></h2>
+            </div>
+            <div class="timeline">
+
+                <!-- 1 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Mar 2026 — Present</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Digital Marketing Manager</h3>
+                                <span class="company">Ace Connect · Full-time · Multan, Pakistan</span>
+                            </div>
+                            <span class="tl-badge current">Current</span>
+                        </div>
+                        <p>Leading digital marketing operations and training at Ace Connect, delivering results-driven
+                            SEO and content strategies.</p>
+                        <ul class="tl-bullets">
+                            <li>Delivered practical training in SEO, social media marketing, and content strategy</li>
+                            <li>Designed structured training sessions focused on real-world applications and industry
+                                trends</li>
+                            <li>Coordinated office operations and campaign management for smooth training delivery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Nov 2025 — Present</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Human Resources Manager</h3>
+                                <span class="company">KODDOX TECHNOLOGIES · Freelance · Hybrid</span>
+                            </div>
+                            <span class="tl-badge current">Current</span>
+                        </div>
+                        <p>Managing HR operations and global human resources functions for Koddox Technologies on a
+                            freelance basis.</p>
+                        <ul class="tl-bullets">
+                            <li>Overseeing administration and global HR management processes</li>
+                            <li>Supporting team growth and organizational development initiatives</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Aug 2024 — Present</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Chief Executive Officer</h3>
+                                <span class="company">Satay PK · Freelance · Multan, Pakistan · Remote</span>
+                            </div>
+                            <span class="tl-badge current">Current</span>
+                        </div>
+                        <p>Leading SatayPK, a dynamic software house specializing in cutting-edge IT solutions for
+                            clients worldwide.</p>
+                        <ul class="tl-bullets">
+                            <li>Delivering website development, project management, and custom programming</li>
+                            <li>Overseeing graphic &amp; UI/UX design and comprehensive IT support</li>
+                            <li>Building and managing a remote team across diverse tech domains</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2023 — Aug 2025</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Web Developer</h3>
+                                <span class="company">Fiverr · Self-employed · Remote</span>
+                            </div>
+                        </div>
+                        <p>Worked as a freelance Web Developer on Fiverr for over 2 years, delivering client projects in
+                            web development and digital solutions.</p>
+                        <ul class="tl-bullets">
+                            <li>Built and delivered websites using HTML, CSS, WordPress, and related technologies</li>
+                            <li>Managed client communication, project scoping, and timely delivery</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Dec 2023 — Oct 2025</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Analysis Specialist</h3>
+                                <span class="company">TradingView · Self-employed · Remote</span>
+                            </div>
+                        </div>
+                        <p>Worked as a self-employed Analysis Specialist utilizing TradingView for market research and
+                            trading strategy development.</p>
+                        <ul class="tl-bullets">
+                            <li>Conducted in-depth market analysis and project management</li>
+                            <li>Applied trading knowledge to develop data-driven strategies</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2021 — Jun 2025</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Graphic Designer</h3>
+                                <span class="company">Fiverr · Freelance · Multan, Pakistan</span>
+                            </div>
+                        </div>
+                        <p>Freelance graphic designer on Fiverr for 4+ years, delivering creative design solutions for
+                            clients worldwide.</p>
+                        <ul class="tl-bullets">
+                            <li>Delivered graphic design projects with high client satisfaction</li>
+                            <li>Managed multiple concurrent projects across diverse industries</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Oct 2023 — Feb 2024</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Internship Trainee</h3>
+                                <span class="company">Institute of Southern Punjab (USP) · Full-time · Multan,
+                                    Pakistan</span>
+                            </div>
+                            <span class="tl-badge edu">Internship</span>
+                        </div>
+                        <p>Designed and developed websites while managing social media accounts to boost engagement and
+                            reach at USP.</p>
+                        <ul class="tl-bullets">
+                            <li>Applied UI/UX design and front-end development skills in real-world projects</li>
+                            <li>Managed digital marketing activities to enhance online presence</li>
+                            <li>Blended creativity with technical expertise to deliver impactful online experiences</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education: USP -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2022 — Jul 2026</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Bachelor's in Computer Science</h3>
+                                <span class="company">University of Southern Punjab (USP) · Multan, Pakistan</span>
+                            </div>
+                            <span class="tl-badge edu">Education</span>
+                        </div>
+                        <p>Pursuing a Bachelor's degree in Computer Science, building expertise in programming, software
+                            development, and digital design.</p>
+                        <ul class="tl-bullets">
+                            <li>Skills: Programming, Adobe Illustrator, and more</li>
+                            <li>Hands-on experience through internship at the same institution</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Education: KIPS -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">Jun 2020 — Sep 2022</div>
+                    <div class="timeline-card">
+                        <div class="tl-header">
+                            <div>
+                                <h3>Intermediate in Computer Science</h3>
+                                <span class="company">KIPS Education System · Computer Science</span>
+                            </div>
+                            <span class="tl-badge edu">Education</span>
+                        </div>
+                        <p>Completed Intermediate with a focus on Computer Science. Achieved Grade A, building a strong
+                            academic foundation for university studies.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────────── CONTACT ───────────── -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">05 / Contact</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+                <p class="section-sub">Have a project in mind or just want to chat? My inbox is always open.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="ci-label">Email</span>
+                            <a href="mailto:sammiikhann1@gmail.com" class="ci-value">sammiikhann1@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path
+                                    d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81 19.79 19.79 0 01.01 1.18 2 2 0 012 .01h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="ci-label">Phone / WhatsApp</span>
+                            <a href="tel:+923030342224" class="ci-value">+92 303 034 2224</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                        </div>
+                        <div>
+                            <span class="ci-label">Availability</span>
+                            <span class="ci-value">Open to full-time & freelance</span>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-btn" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M19 3a2 2 0 012 2v14a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h14m-.5 15.5v-5.3a3.26 3.26 0 00-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 011.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 001.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 00-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="Twitter">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                            </svg>
+                        </a>
+                        <a href="#" class="social-btn" aria-label="Dribbble">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm6.605 4.61a8.502 8.502 0 011.93 5.314c-.281-.054-3.101-.629-5.943-.271-.065-.141-.12-.293-.184-.445a25.416 25.416 0 00-.564-1.236c3.145-1.28 4.577-3.124 4.761-3.362zM12 3.475c2.17 0 4.154.813 5.662 2.148-.152.216-1.443 1.941-4.48 3.08-1.399-2.57-2.95-4.675-3.189-5A8.687 8.687 0 0112 3.475zm-3.633.803a53.896 53.896 0 013.167 4.935c-3.992 1.063-7.517 1.04-7.896 1.04a8.581 8.581 0 014.729-5.975zM3.453 12.01v-.26c.37.01 4.512.065 8.775-1.215.25.477.477.965.694 1.453-.109.033-.228.065-.336.098-4.404 1.42-6.747 5.303-6.942 5.629a8.522 8.522 0 01-2.19-5.705zM12 20.547a8.482 8.482 0 01-5.239-1.8c.152-.315 1.888-3.656 6.703-5.337.022-.01.033-.01.054-.022a35.318 35.318 0 011.823 6.475 8.4 8.4 0 01-3.341.684zm4.761-1.465c-.086-.52-.542-3.015-1.659-6.084 2.679-.423 5.022.271 5.314.369a8.468 8.468 0 01-3.655 5.715z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <form class="contact-form reveal" id="contactForm">
+                    <input type="hidden" name="access_key" value="ec902436-7d7d-4dc8-a78f-1c38c43185d5" />
+                    <input type="hidden" name="subject" value="New Contact Form Message — Portfolio" />
+                    <input type="hidden" name="from_name" value="Muhammad Sami Khan Portfolio" />
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="Project Inquiry" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary full">
+                        <span>Send Message</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ───────────── FOOTER ───────────── -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">
+                    <span class="brand-dot"></span>MSK
+                </div>
+                <p class="footer-text">Designed & Built with ♥ by Muhammad Sami Khan · 2026</p>
+                <a href="#home" class="back-top" id="backTop">↑ Top</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
